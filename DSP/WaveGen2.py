@@ -29,27 +29,26 @@ fig, (ax1, ax2, ax3) = plt.subplots(nrows=1,ncols=3,sharey=True)
 # with an amplitude and frequency of 1. Our units here are arbitrary since
 # we are working with made-up data. An example would be amplitude in voltage
 # and frequency in Hz (1/s) in EEG data.
-A = np.sin(t)
-ax1.plot(t,A)
-ax1.set_title('f = 1, G = 1')
+y = np.sin(t)
+ax1.plot(t,y)
+ax1.set_title('f = 1, A = 1')
 ax1.set_ylim(-2,2)
 
-# To change the peak amplitude of a sine wave, multiply it by a gain value (G).
-G = 2
-A = G*np.sin(t)
-ax2.plot(t,A)
-ax2.set_title('f = 1, G = 2')
+# To change the peak amplitude of a sine wave, multiply it by A.
+A = 2
+y = A*np.sin(t)
+ax2.plot(t,y)
+ax2.set_title('f = 1, A = 2')
 
 # Strictly speaking, the amplitude is constantly changing in this wave.
-# What we call G is the peak amplitude, and scales the amplitude value at
+# What we call A here is the peak amplitude, and scales the amplitude value at
 # each timepoint.
 
 # Frequency is similarly changed by multiplying inside the sine function.
 f = 2
-A = np.sin(f*t)
-ax3.plot(t,A)
-ax3.set_title('f = 2, G = 1')
+y = np.sin(f*t)
+ax3.plot(t,y)
+ax3.set_title('f = 2, A = 1')
 
-
-# Let's take a look at how these waves look compared to each other.
+# Now we can compare these waves to each other visually.
 plt.show
