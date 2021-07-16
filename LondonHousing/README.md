@@ -4,4 +4,4 @@ Goal is to show the steps of:
 2) Exploratory Data Analysis
 3) Predictive Analytics/Supervised Machine Learning
 
-with some real-world data. Currently only step 1 is available here.
+with some real-world data. Currently step 1 is complete, some EDA is done already.
